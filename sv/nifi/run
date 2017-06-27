@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#sv start socklog-unix || exit 1
+
+source /etc/envvars
+
+cd /nifi
+
+exec 2>&1
+exec ./bin/nifi.sh run
